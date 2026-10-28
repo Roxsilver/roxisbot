@@ -1,0 +1,405 @@
+{
+  "channel": "Roxsilver_",
+  "login": "roxsilver_",
+  "avatar": null,
+  "bot": "roxisbot_",
+  "prefix": "!",
+  "links": {
+    "twitch": "https://twitch.tv/roxsilver_",
+    "discord": "https://discord.gg/QxzVgXtWC3"
+  },
+  "categories": {
+    "verwaltung": {
+      "emoji": "⚙️",
+      "label": "Commands"
+    },
+    "umfrage": {
+      "emoji": "📊",
+      "label": "Umfrage"
+    },
+    "gluecksrad": {
+      "emoji": "🎡",
+      "label": "Glücksrad"
+    },
+    "giveaway": {
+      "emoji": "🎁",
+      "label": "Giveaway"
+    },
+    "zaehler": {
+      "emoji": "🔢",
+      "label": "Zähler"
+    },
+    "moderation": {
+      "emoji": "🛡️",
+      "label": "Moderation"
+    },
+    "links": {
+      "emoji": "💬",
+      "label": "Links"
+    },
+    "spass": {
+      "emoji": "🎉",
+      "label": "Spaß"
+    },
+    "mitmachen": {
+      "emoji": "📊",
+      "label": "Mitmachen"
+    },
+    "info": {
+      "emoji": "ℹ️",
+      "label": "Info"
+    },
+    "mehr": {
+      "emoji": "✨",
+      "label": "Mehr"
+    }
+  },
+  "order": {
+    "viewer": [
+      "links",
+      "spass",
+      "mitmachen",
+      "info",
+      "mehr"
+    ],
+    "mod": [
+      "verwaltung",
+      "umfrage",
+      "gluecksrad",
+      "giveaway",
+      "zaehler",
+      "moderation",
+      "links",
+      "spass",
+      "mitmachen",
+      "info",
+      "mehr"
+    ]
+  },
+  "commands": [
+    {
+      "name": "addcmd",
+      "aliases": [],
+      "permission": "mod",
+      "category": "verwaltung",
+      "usage": "!addcmd !name Text",
+      "description": "Legt einen neuen Command an. Platzhalter: {user}, {target}, {args}, {uses}.",
+      "custom": false
+    },
+    {
+      "name": "addcounter",
+      "aliases": [],
+      "permission": "mod",
+      "category": "zaehler",
+      "usage": "!addcounter name Text mit {count}",
+      "description": "Legt einen neuen Zähler an.",
+      "custom": false
+    },
+    {
+      "name": "cancelpoll",
+      "aliases": [],
+      "permission": "mod",
+      "category": "umfrage",
+      "usage": null,
+      "description": "Bricht die Umfrage ohne Ergebnis ab.",
+      "custom": false
+    },
+    {
+      "name": "cmdperm",
+      "aliases": [],
+      "permission": "mod",
+      "category": "verwaltung",
+      "usage": "!cmdperm !name mod",
+      "description": "Legt fest, wer einen Command nutzen darf: everyone, sub, vip, mod oder broadcaster.",
+      "custom": false
+    },
+    {
+      "name": "commands",
+      "aliases": [
+        "befehle",
+        "cmds"
+      ],
+      "permission": "everyone",
+      "category": "info",
+      "usage": null,
+      "description": "Zeigt alle Befehle im Chat – sortiert nach Kategorien.",
+      "custom": false
+    },
+    {
+      "name": "delcmd",
+      "aliases": [
+        "removecmd"
+      ],
+      "permission": "mod",
+      "category": "verwaltung",
+      "usage": "!delcmd !name",
+      "description": "Löscht einen eigenen Command.",
+      "custom": false
+    },
+    {
+      "name": "delcounter",
+      "aliases": [],
+      "permission": "mod",
+      "category": "zaehler",
+      "usage": "!delcounter name",
+      "description": "Löscht einen Zähler.",
+      "custom": false
+    },
+    {
+      "name": "dice",
+      "aliases": [
+        "würfel",
+        "wuerfel",
+        "roll"
+      ],
+      "permission": "everyone",
+      "category": "spass",
+      "usage": "!dice [Seiten]",
+      "description": "Würfelt eine Zahl – ohne Angabe mit einem normalen Würfel (W6).",
+      "custom": false
+    },
+    {
+      "name": "discord",
+      "aliases": [],
+      "permission": "everyone",
+      "category": "links",
+      "usage": null,
+      "description": "💬 Komm auf unseren Discord: https://discord.gg/QxzVgXtWC3",
+      "custom": true
+    },
+    {
+      "name": "editcmd",
+      "aliases": [],
+      "permission": "mod",
+      "category": "verwaltung",
+      "usage": "!editcmd !name Text",
+      "description": "Ändert den Text eines eigenen Commands.",
+      "custom": false
+    },
+    {
+      "name": "endpoll",
+      "aliases": [],
+      "permission": "mod",
+      "category": "umfrage",
+      "usage": null,
+      "description": "Beendet die Umfrage sofort und zeigt das Ergebnis.",
+      "custom": false
+    },
+    {
+      "name": "followage",
+      "aliases": [
+        "follow"
+      ],
+      "permission": "everyone",
+      "category": "info",
+      "usage": "!followage [@name]",
+      "description": "Zeigt, seit wann du (oder jemand anderes) dem Kanal folgst.",
+      "custom": false
+    },
+    {
+      "name": "giveaway",
+      "aliases": [
+        "ga"
+      ],
+      "permission": "mod",
+      "category": "giveaway",
+      "usage": "!giveaway start Preis",
+      "description": "Startet ein Giveaway. Danach: close (Teilnahme schließen), draw (Gewinner ziehen), cancel (abbrechen).",
+      "custom": false
+    },
+    {
+      "name": "hallo",
+      "aliases": [],
+      "permission": "everyone",
+      "category": "spass",
+      "usage": null,
+      "description": "Hey {user}, schön dass du da bist! ❤️",
+      "custom": true
+    },
+    {
+      "name": "hug",
+      "aliases": [],
+      "permission": "everyone",
+      "category": "spass",
+      "usage": null,
+      "description": "🤗 {user} umarmt {target} ganz fest!",
+      "custom": true
+    },
+    {
+      "name": "join",
+      "aliases": [],
+      "permission": "everyone",
+      "category": "mitmachen",
+      "usage": null,
+      "description": "Macht beim laufenden Giveaway mit.",
+      "custom": false
+    },
+    {
+      "name": "lurk",
+      "aliases": [],
+      "permission": "everyone",
+      "category": "spass",
+      "usage": null,
+      "description": "🛋️ {user} macht es sich im Lurk gemütlich – danke, dass du da bist!",
+      "custom": true
+    },
+    {
+      "name": "modcmds",
+      "aliases": [
+        "modbefehle"
+      ],
+      "permission": "mod",
+      "category": "verwaltung",
+      "usage": null,
+      "description": "Zeigt alle Mod-Befehle im Chat.",
+      "custom": false
+    },
+    {
+      "name": "permit",
+      "aliases": [],
+      "permission": "mod",
+      "category": "moderation",
+      "usage": "!permit @name",
+      "description": "Erlaubt jemandem für 60 Sekunden einen Link.",
+      "custom": false
+    },
+    {
+      "name": "poll",
+      "aliases": [],
+      "permission": "mod",
+      "category": "umfrage",
+      "usage": "!poll [Sekunden] Frage | A | B",
+      "description": "Startet eine Chat-Umfrage mit 2 bis 10 Antworten.",
+      "custom": false
+    },
+    {
+      "name": "setcat",
+      "aliases": [],
+      "permission": "mod",
+      "category": "verwaltung",
+      "usage": "!setcat !name info",
+      "description": "Ändert die Kategorie eines Commands: links, spass, mitmachen, info oder mehr.",
+      "custom": false
+    },
+    {
+      "name": "so",
+      "aliases": [
+        "shoutout"
+      ],
+      "permission": "mod",
+      "category": "moderation",
+      "usage": "!so @name",
+      "description": "Shoutout für einen anderen Kanal – mit Link und zuletzt gespieltem Spiel.",
+      "custom": false
+    },
+    {
+      "name": "socials",
+      "aliases": [],
+      "permission": "everyone",
+      "category": "links",
+      "usage": null,
+      "description": "📱 Twitch: https://twitch.tv/roxsilver_ | Discord: https://discord.gg/QxzVgXtWC3",
+      "custom": true
+    },
+    {
+      "name": "spin",
+      "aliases": [
+        "drehen"
+      ],
+      "permission": "mod",
+      "category": "gluecksrad",
+      "usage": "!spin [A, B, C]",
+      "description": "Dreht das Glücksrad. Mit einer Komma-Liste wird einmalig mit eigenen Feldern gedreht.",
+      "custom": false
+    },
+    {
+      "name": "testalert",
+      "aliases": [],
+      "permission": "mod",
+      "category": "moderation",
+      "usage": "!testalert follow",
+      "description": "Zeigt einen Test-Alert im Overlay: follow, raid, sub, resub, giftsub, cheer oder redeem.",
+      "custom": false
+    },
+    {
+      "name": "tod",
+      "aliases": [],
+      "permission": "everyone",
+      "category": "info",
+      "usage": null,
+      "description": "Zeigt den Zähler „tod“.",
+      "custom": false
+    },
+    {
+      "name": "tod+",
+      "aliases": [
+        "tod-",
+        "tod=5"
+      ],
+      "permission": "mod",
+      "category": "zaehler",
+      "usage": null,
+      "description": "Zähler „tod“ um 1 erhöhen, verringern oder auf einen Wert setzen.",
+      "custom": false
+    },
+    {
+      "name": "unlurk",
+      "aliases": [],
+      "permission": "everyone",
+      "category": "spass",
+      "usage": null,
+      "description": "👋 Willkommen zurück aus dem Lurk, {user}!",
+      "custom": true
+    },
+    {
+      "name": "uptime",
+      "aliases": [],
+      "permission": "everyone",
+      "category": "info",
+      "usage": null,
+      "description": "Zeigt, wie lange der Stream schon läuft.",
+      "custom": false
+    },
+    {
+      "name": "vote",
+      "aliases": [
+        "v"
+      ],
+      "permission": "everyone",
+      "category": "mitmachen",
+      "usage": "!vote <Nummer>",
+      "description": "Stimmt bei einer laufenden Umfrage ab. Einfach nur die Zahl schreiben geht auch.",
+      "custom": false
+    },
+    {
+      "name": "wheel",
+      "aliases": [
+        "rad",
+        "glücksrad"
+      ],
+      "permission": "everyone",
+      "category": "mitmachen",
+      "usage": null,
+      "description": "Zeigt alle Felder des Glücksrads.",
+      "custom": false
+    },
+    {
+      "name": "wheel add",
+      "aliases": [],
+      "permission": "mod",
+      "category": "gluecksrad",
+      "usage": "!wheel add Text",
+      "description": "Fügt dem Glücksrad ein Feld hinzu.",
+      "custom": false
+    },
+    {
+      "name": "wheel remove",
+      "aliases": [],
+      "permission": "mod",
+      "category": "gluecksrad",
+      "usage": "!wheel remove 3",
+      "description": "Entfernt ein Feld (Nummer oder genauer Text).",
+      "custom": false
+    }
+  ]
+}
