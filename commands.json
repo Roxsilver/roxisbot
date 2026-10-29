@@ -287,6 +287,15 @@
       "custom": false
     },
     {
+      "name": "lovecheck",
+      "aliases": [],
+      "permission": "everyone",
+      "category": "spass",
+      "usage": null,
+      "description": "❤️ {user} und {target} passen zu {random}% zusammen!",
+      "custom": true
+    },
+    {
       "name": "lurk",
       "aliases": [],
       "permission": "everyone",
