@@ -45,6 +45,10 @@
       "emoji": "📊",
       "label": "Mitmachen"
     },
+    "spotify": {
+      "emoji": "🎵",
+      "label": "Spotify"
+    },
     "begleiter": {
       "emoji": "🥚",
       "label": "Begleiter"
@@ -63,6 +67,7 @@
       "links",
       "spass",
       "mitmachen",
+      "spotify",
       "begleiter",
       "info",
       "mehr"
@@ -77,6 +82,7 @@
       "links",
       "spass",
       "mitmachen",
+      "spotify",
       "begleiter",
       "info",
       "mehr"
@@ -373,7 +379,7 @@
       "permission": "mod",
       "category": "verwaltung",
       "usage": "!setcat !name info",
-      "description": "Ändert die Kategorie eines Commands: links, spass, mitmachen, info oder mehr.",
+      "description": "Ändert die Kategorie eines Commands: links, spass, mitmachen, spotify, begleiter, info oder mehr.",
       "custom": false
     },
     {
@@ -422,7 +428,7 @@
         "currentsong"
       ],
       "permission": "everyone",
-      "category": "info",
+      "category": "spotify",
       "usage": null,
       "description": "Zeigt den aktuellen Spotify-Titel mit Link.",
       "custom": false
@@ -444,7 +450,7 @@
         "songrequest"
       ],
       "permission": "everyone",
-      "category": "mitmachen",
+      "category": "spotify",
       "usage": "!sr <Spotify-Track-Link oder Künstler – Titel>",
       "description": "Wünscht einen Song für die Spotify-Warteschlange. Standard: ein erfolgreicher Wunsch pro Minute und Zuschauer, maximal 10 Minuten pro Song.",
       "custom": false
@@ -453,7 +459,7 @@
       "name": "sroff",
       "aliases": [],
       "permission": "mod",
-      "category": "mitmachen",
+      "category": "spotify",
       "usage": null,
       "description": "Schließt die Spotify-Songwünsche für Zuschauer.",
       "custom": false
@@ -462,7 +468,7 @@
       "name": "sron",
       "aliases": [],
       "permission": "mod",
-      "category": "mitmachen",
+      "category": "spotify",
       "usage": null,
       "description": "Öffnet die Spotify-Songwünsche für Zuschauer.",
       "custom": false
