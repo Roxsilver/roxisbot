@@ -89,7 +89,7 @@
       "permission": "mod",
       "category": "verwaltung",
       "usage": "!addcmd !name Text",
-      "description": "Legt einen neuen Command an. Platzhalter: {user}, {target}, {args}, {uses}.",
+      "description": "Legt einen neuen Command an. Platzhalter: {user}, {target}, {args}, {uses}, {channel}, {random} (0–100).",
       "custom": false
     },
     {
@@ -417,6 +417,17 @@
       "custom": true
     },
     {
+      "name": "song",
+      "aliases": [
+        "currentsong"
+      ],
+      "permission": "everyone",
+      "category": "info",
+      "usage": null,
+      "description": "Zeigt den aktuellen Spotify-Titel mit Link.",
+      "custom": false
+    },
+    {
       "name": "spin",
       "aliases": [
         "drehen"
@@ -425,6 +436,35 @@
       "category": "gluecksrad",
       "usage": "!spin [A, B, C]",
       "description": "Dreht das Glücksrad. Mit einer Komma-Liste wird einmalig mit eigenen Feldern gedreht.",
+      "custom": false
+    },
+    {
+      "name": "sr",
+      "aliases": [
+        "songrequest"
+      ],
+      "permission": "everyone",
+      "category": "mitmachen",
+      "usage": "!sr <Spotify-Track-Link oder Künstler – Titel>",
+      "description": "Wünscht einen Song für die Spotify-Warteschlange. Standard: ein erfolgreicher Wunsch pro Minute und Zuschauer, maximal 10 Minuten pro Song.",
+      "custom": false
+    },
+    {
+      "name": "sroff",
+      "aliases": [],
+      "permission": "mod",
+      "category": "mitmachen",
+      "usage": null,
+      "description": "Schließt die Spotify-Songwünsche für Zuschauer.",
+      "custom": false
+    },
+    {
+      "name": "sron",
+      "aliases": [],
+      "permission": "mod",
+      "category": "mitmachen",
+      "usage": null,
+      "description": "Öffnet die Spotify-Songwünsche für Zuschauer.",
       "custom": false
     },
     {
