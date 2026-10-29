@@ -49,6 +49,10 @@
       "emoji": "🎵",
       "label": "Spotify"
     },
+    "zitate": {
+      "emoji": "📖",
+      "label": "Zitate"
+    },
     "begleiter": {
       "emoji": "🥚",
       "label": "Begleiter"
@@ -68,6 +72,7 @@
       "spass",
       "mitmachen",
       "spotify",
+      "zitate",
       "begleiter",
       "info",
       "mehr"
@@ -83,6 +88,7 @@
       "spass",
       "mitmachen",
       "spotify",
+      "zitate",
       "begleiter",
       "info",
       "mehr"
@@ -105,6 +111,18 @@
       "category": "zaehler",
       "usage": "!addcounter name Text mit {count}",
       "description": "Legt einen neuen Zähler an.",
+      "custom": false
+    },
+    {
+      "name": "addzitat",
+      "aliases": [
+        "addquote",
+        "zitatadd"
+      ],
+      "permission": "mod",
+      "category": "zitate",
+      "usage": "!addzitat Text [| Name]",
+      "description": "Speichert ein neues Zitat mit fester Nummer. Der Name nach dem letzten | ist optional.",
       "custom": false
     },
     {
@@ -181,6 +199,18 @@
       "custom": false
     },
     {
+      "name": "delzitat",
+      "aliases": [
+        "delquote",
+        "zitatdel"
+      ],
+      "permission": "mod",
+      "category": "zitate",
+      "usage": "!delzitat Nummer",
+      "description": "Entfernt ein Zitat. Die übrigen Nummern bleiben unverändert.",
+      "custom": false
+    },
+    {
       "name": "dice",
       "aliases": [
         "würfel",
@@ -212,6 +242,18 @@
       "custom": false
     },
     {
+      "name": "editzitat",
+      "aliases": [
+        "editquote",
+        "zitatedit"
+      ],
+      "permission": "mod",
+      "category": "zitate",
+      "usage": "!editzitat Nummer Neuer Text [| Name]",
+      "description": "Ändert ein gespeichertes Zitat. Seine Nummer bleibt erhalten; Text und optionaler Name werden ersetzt.",
+      "custom": false
+    },
+    {
       "name": "endpoll",
       "aliases": [],
       "permission": "mod",
@@ -230,6 +272,15 @@
       "category": "begleiter",
       "usage": null,
       "description": "Füttert deinen Begleiter (alle 5 Min.).",
+      "custom": false
+    },
+    {
+      "name": "feier",
+      "aliases": [],
+      "permission": "everyone",
+      "category": "spotify",
+      "usage": null,
+      "description": "Gibt dem laufenden Song eine Stimme für den „Song des Abends“. Pro Person und Titel zählt eine Stimme bis zur nächsten Wertungsrunde.",
       "custom": false
     },
     {
@@ -374,12 +425,32 @@
       "custom": false
     },
     {
+      "name": "queue",
+      "aliases": [
+        "warteschlange"
+      ],
+      "permission": "everyone",
+      "category": "spotify",
+      "usage": null,
+      "description": "Zeigt die nächsten drei Musiktitel der Spotify-Warteschlange, auch aus der normalen Wiedergabe. Podcasts und lokale Dateien werden ausgelassen.",
+      "custom": false
+    },
+    {
       "name": "setcat",
       "aliases": [],
       "permission": "mod",
       "category": "verwaltung",
       "usage": "!setcat !name info",
-      "description": "Ändert die Kategorie eines Commands: links, spass, mitmachen, spotify, begleiter, info oder mehr.",
+      "description": "Ändert die Kategorie eines Commands: links, spass, mitmachen, spotify, zitate, begleiter, info oder mehr.",
+      "custom": false
+    },
+    {
+      "name": "skip",
+      "aliases": [],
+      "permission": "mod",
+      "category": "spotify",
+      "usage": null,
+      "description": "Überspringt den laufenden Spotify-Song. Nur Mods und Streamer können direkt überspringen.",
       "custom": false
     },
     {
@@ -431,6 +502,26 @@
       "category": "spotify",
       "usage": null,
       "description": "Zeigt den aktuellen Spotify-Titel mit Link.",
+      "custom": false
+    },
+    {
+      "name": "songreset",
+      "aliases": [],
+      "permission": "mod",
+      "category": "spotify",
+      "usage": null,
+      "description": "Beginnt eine neue Runde für den „Song des Abends“ und löscht die bisherige Songwertung, zum Beispiel vor dem nächsten Stream.",
+      "custom": false
+    },
+    {
+      "name": "songtop",
+      "aliases": [
+        "songdesabends"
+      ],
+      "permission": "everyone",
+      "category": "spotify",
+      "usage": null,
+      "description": "Zeigt die drei beliebtesten Songs der aktuellen Wertungsrunde. Die Wertung bleibt bei einem Bot-Neustart erhalten.",
       "custom": false
     },
     {
@@ -533,6 +624,15 @@
       "custom": false
     },
     {
+      "name": "voteskip",
+      "aliases": [],
+      "permission": "everyone",
+      "category": "spotify",
+      "usage": null,
+      "description": "Stimmt dafür, den laufenden Song zu überspringen. Standard: drei verschiedene Zuschauer; jede Person zählt einmal pro laufendem Titel.",
+      "custom": false
+    },
+    {
       "name": "wheel",
       "aliases": [
         "rad",
@@ -560,6 +660,28 @@
       "category": "gluecksrad",
       "usage": "!wheel remove 3",
       "description": "Entfernt ein Feld (Nummer oder genauer Text).",
+      "custom": false
+    },
+    {
+      "name": "zitat",
+      "aliases": [
+        "quote"
+      ],
+      "permission": "everyone",
+      "category": "zitate",
+      "usage": "!zitat [Nummer]",
+      "description": "Zeigt ein zufälliges gespeichertes Zitat oder das Zitat mit der angegebenen Nummer.",
+      "custom": false
+    },
+    {
+      "name": "zitate",
+      "aliases": [
+        "quotes"
+      ],
+      "permission": "everyone",
+      "category": "zitate",
+      "usage": "!zitate [Suchwort]",
+      "description": "Zeigt die ersten Zitate mit Nummer und Vorschau. Mit Suchwort wird nach Text oder Name gesucht.",
       "custom": false
     }
   ]
