@@ -368,6 +368,15 @@
       "custom": false
     },
     {
+      "name": "slap",
+      "aliases": [],
+      "permission": "everyone",
+      "category": "spass",
+      "usage": null,
+      "description": "{user} verteilt eine bestimmt Liebevolle Schelle an {target} ! Kappa",
+      "custom": true
+    },
+    {
       "name": "sleep",
       "aliases": [
         "schlafen"
