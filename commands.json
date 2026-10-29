@@ -1,7 +1,7 @@
 {
   "channel": "Roxsilver_",
   "login": "roxsilver_",
-  "avatar": null,
+  "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/13a84786-aaa8-472d-9691-54446735d041-profile_image-300x300.png",
   "bot": "roxisbot_",
   "prefix": "!",
   "links": {
@@ -45,6 +45,10 @@
       "emoji": "📊",
       "label": "Mitmachen"
     },
+    "begleiter": {
+      "emoji": "🥚",
+      "label": "Begleiter"
+    },
     "info": {
       "emoji": "ℹ️",
       "label": "Info"
@@ -59,6 +63,7 @@
       "links",
       "spass",
       "mitmachen",
+      "begleiter",
       "info",
       "mehr"
     ],
@@ -72,6 +77,7 @@
       "links",
       "spass",
       "mitmachen",
+      "begleiter",
       "info",
       "mehr"
     ]
@@ -93,6 +99,29 @@
       "category": "zaehler",
       "usage": "!addcounter name Text mit {count}",
       "description": "Legt einen neuen Zähler an.",
+      "custom": false
+    },
+    {
+      "name": "adopt",
+      "aliases": [
+        "adoptieren"
+      ],
+      "permission": "everyone",
+      "category": "begleiter",
+      "usage": null,
+      "description": "Adoptiere ein Ei – daraus schlüpft ein zufälliger Feuer-, Wasser-, Erd- oder Luftgeist, der im Stream herumläuft.",
+      "custom": false
+    },
+    {
+      "name": "begleiter",
+      "aliases": [
+        "companion",
+        "haustier"
+      ],
+      "permission": "everyone",
+      "category": "begleiter",
+      "usage": "!begleiter [@name]",
+      "description": "Zeigt Hunger, Laune, Energie und Erfahrung deines Begleiters (oder den von jemand anderem).",
       "custom": false
     },
     {
@@ -186,6 +215,18 @@
       "custom": false
     },
     {
+      "name": "feed",
+      "aliases": [
+        "füttern",
+        "fuettern"
+      ],
+      "permission": "everyone",
+      "category": "begleiter",
+      "usage": null,
+      "description": "Füttert deinen Begleiter (alle 5 Min.).",
+      "custom": false
+    },
+    {
       "name": "followage",
       "aliases": [
         "follow"
@@ -194,6 +235,17 @@
       "category": "info",
       "usage": "!followage [@name]",
       "description": "Zeigt, seit wann du (oder jemand anderes) dem Kanal folgst.",
+      "custom": false
+    },
+    {
+      "name": "freilassen",
+      "aliases": [
+        "release"
+      ],
+      "permission": "everyone",
+      "category": "begleiter",
+      "usage": "!freilassen ja",
+      "description": "Lässt deinen Begleiter frei – danach kannst du ein neues Ei adoptieren.",
       "custom": false
     },
     {
@@ -255,12 +307,46 @@
       "custom": false
     },
     {
+      "name": "name",
+      "aliases": [
+        "taufen"
+      ],
+      "permission": "everyone",
+      "category": "begleiter",
+      "usage": "!name Flammi",
+      "description": "Gibt deinem Begleiter einen Namen (max. 16 Zeichen).",
+      "custom": false
+    },
+    {
       "name": "permit",
       "aliases": [],
       "permission": "mod",
       "category": "moderation",
       "usage": "!permit @name",
       "description": "Erlaubt jemandem für 60 Sekunden einen Link.",
+      "custom": false
+    },
+    {
+      "name": "pet",
+      "aliases": [
+        "streicheln",
+        "kuscheln"
+      ],
+      "permission": "everyone",
+      "category": "begleiter",
+      "usage": null,
+      "description": "Streichelt deinen Begleiter oder wärmt dein Ei, damit es schneller schlüpft (jede Minute).",
+      "custom": false
+    },
+    {
+      "name": "play",
+      "aliases": [
+        "spielen"
+      ],
+      "permission": "everyone",
+      "category": "begleiter",
+      "usage": null,
+      "description": "Spielt mit deinem Begleiter – macht gute Laune, aber müde (alle 5 Min.).",
       "custom": false
     },
     {
@@ -279,6 +365,17 @@
       "category": "verwaltung",
       "usage": "!setcat !name info",
       "description": "Ändert die Kategorie eines Commands: links, spass, mitmachen, info oder mehr.",
+      "custom": false
+    },
+    {
+      "name": "sleep",
+      "aliases": [
+        "schlafen"
+      ],
+      "permission": "everyone",
+      "category": "begleiter",
+      "usage": null,
+      "description": "Schickt deinen Begleiter für ein Nickerchen schlafen (alle 10 Min.).",
       "custom": false
     },
     {
@@ -318,7 +415,7 @@
       "permission": "mod",
       "category": "moderation",
       "usage": "!testalert follow",
-      "description": "Zeigt einen Test-Alert im Overlay: follow, raid, sub, resub, giftsub, cheer oder redeem.",
+      "description": "Zeigt einen Test-Alert im Overlay: follow, raid, sub, resub, giftsub, cheer, redeem oder donation.",
       "custom": false
     },
     {
