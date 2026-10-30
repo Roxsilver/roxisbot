@@ -6,7 +6,8 @@
   "prefix": "!",
   "links": {
     "twitch": "https://twitch.tv/roxsilver_",
-    "discord": "https://discord.gg/QxzVgXtWC3"
+    "discord": "https://discord.gg/QxzVgXtWC3",
+    "AwakenLife": "https://discord.com/invite/rvKqHdYX5j"
   },
   "categories": {
     "verwaltung": {
@@ -135,6 +136,15 @@
       "usage": null,
       "description": "Adoptiere ein Ei – daraus schlüpft ein zufälliger Feuer-, Wasser-, Erd- oder Luftgeist, der im Stream herumläuft.",
       "custom": false
+    },
+    {
+      "name": "awakenlife",
+      "aliases": [],
+      "permission": "everyone",
+      "category": "links",
+      "usage": null,
+      "description": "🎮 AwakenLife – unser GTA Roleplay Server: https://discord.com/invite/rvKqHdYX5j",
+      "custom": true
     },
     {
       "name": "begleiter",
