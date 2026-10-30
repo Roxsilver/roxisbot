@@ -158,6 +158,26 @@
       "custom": false
     },
     {
+      "name": "cancelpredict",
+      "aliases": [],
+      "permission": "mod",
+      "category": "umfrage",
+      "usage": null,
+      "description": "Bricht die Vorhersage ab. Alle bekommen ihre Kanalpunkte zurück.",
+      "custom": false
+    },
+    {
+      "name": "challenge",
+      "aliases": [
+        "herausforderung"
+      ],
+      "permission": "everyone",
+      "category": "mitmachen",
+      "usage": null,
+      "description": "Zeigt die laufende Kanalpunkte-Herausforderung und wie lange sie noch dauert.",
+      "custom": false
+    },
+    {
       "name": "cmdperm",
       "aliases": [],
       "permission": "mod",
@@ -344,6 +364,15 @@
       "custom": false
     },
     {
+      "name": "lockpredict",
+      "aliases": [],
+      "permission": "mod",
+      "category": "umfrage",
+      "usage": null,
+      "description": "Schließt die Einsätze der laufenden Vorhersage.",
+      "custom": false
+    },
+    {
       "name": "lovecheck",
       "aliases": [],
       "permission": "everyone",
@@ -425,6 +454,17 @@
       "custom": false
     },
     {
+      "name": "predict",
+      "aliases": [
+        "wette"
+      ],
+      "permission": "mod",
+      "category": "umfrage",
+      "usage": "!predict [Sekunden] Frage | A | B",
+      "description": "Startet eine Twitch-Vorhersage mit Kanalpunkten. Mit !predict altf4 startet die fertige ALTF4-Wette.",
+      "custom": false
+    },
+    {
       "name": "queue",
       "aliases": [
         "warteschlange"
@@ -433,6 +473,15 @@
       "category": "spotify",
       "usage": null,
       "description": "Zeigt die nächsten drei Musiktitel der Spotify-Warteschlange, auch aus der normalen Wiedergabe. Podcasts und lokale Dateien werden ausgelassen.",
+      "custom": false
+    },
+    {
+      "name": "resettop",
+      "aliases": [],
+      "permission": "broadcaster",
+      "category": "moderation",
+      "usage": null,
+      "description": "Setzt die Bestenliste der Supporter zurück.",
       "custom": false
     },
     {
@@ -451,6 +500,15 @@
       "category": "spotify",
       "usage": null,
       "description": "Überspringt den laufenden Spotify-Song. Nur Mods und Streamer können direkt überspringen.",
+      "custom": false
+    },
+    {
+      "name": "skipchallenge",
+      "aliases": [],
+      "permission": "mod",
+      "category": "moderation",
+      "usage": null,
+      "description": "Überspringt die laufende Kanalpunkte-Herausforderung.",
       "custom": false
     },
     {
@@ -529,10 +587,10 @@
       "aliases": [
         "drehen"
       ],
-      "permission": "mod",
-      "category": "gluecksrad",
-      "usage": "!spin [A, B, C]",
-      "description": "Dreht das Glücksrad. Mit einer Komma-Liste wird einmalig mit eigenen Feldern gedreht.",
+      "permission": "sub",
+      "category": "mitmachen",
+      "usage": "!spin",
+      "description": "Dreht das Glücksrad – für Abonnenten, VIPs und Mods. Mods können mit einer Komma-Liste einmalig eigene Felder nutzen.",
       "custom": false
     },
     {
@@ -592,6 +650,26 @@
       "category": "zaehler",
       "usage": null,
       "description": "Zähler „tod“ um 1 erhöhen, verringern oder auf einen Wert setzen.",
+      "custom": false
+    },
+    {
+      "name": "top",
+      "aliases": [
+        "topsupporter"
+      ],
+      "permission": "everyone",
+      "category": "info",
+      "usage": null,
+      "description": "Zeigt die Top-Supporter bei Bits und verschenkten Abos.",
+      "custom": false
+    },
+    {
+      "name": "twitchpoll",
+      "aliases": [],
+      "permission": "mod",
+      "category": "umfrage",
+      "usage": "!twitchpoll [Sekunden] Frage | A | B",
+      "description": "Startet eine echte Twitch-Umfrage mit 2 bis 5 Antworten.",
       "custom": false
     },
     {
@@ -660,6 +738,15 @@
       "category": "gluecksrad",
       "usage": "!wheel remove 3",
       "description": "Entfernt ein Feld (Nummer oder genauer Text).",
+      "custom": false
+    },
+    {
+      "name": "winpredict",
+      "aliases": [],
+      "permission": "mod",
+      "category": "umfrage",
+      "usage": "!winpredict 1",
+      "description": "Entscheidet die Vorhersage: Die Nummer ist die Gewinner-Antwort.",
       "custom": false
     },
     {
