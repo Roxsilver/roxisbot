@@ -178,6 +178,15 @@
       "custom": false
     },
     {
+      "name": "clip",
+      "aliases": [],
+      "permission": "everyone",
+      "category": "mitmachen",
+      "usage": null,
+      "description": "Erstellt einen Clip vom laufenden Stream und schreibt den Link in den Chat (einmal pro Minute).",
+      "custom": false
+    },
+    {
       "name": "cmdperm",
       "aliases": [],
       "permission": "mod",
@@ -476,6 +485,46 @@
       "custom": false
     },
     {
+      "name": "rennen",
+      "aliases": [
+        "race"
+      ],
+      "permission": "everyone",
+      "category": "begleiter",
+      "usage": null,
+      "description": "Meldet deinen Begleiter für das laufende Rennen an. Er bekommt eine Startnummer.",
+      "custom": false
+    },
+    {
+      "name": "rennenstart",
+      "aliases": [],
+      "permission": "mod",
+      "category": "begleiter",
+      "usage": null,
+      "description": "Startet die Anmeldung für ein Begleiter-Rennen.",
+      "custom": false
+    },
+    {
+      "name": "rennenstop",
+      "aliases": [],
+      "permission": "mod",
+      "category": "begleiter",
+      "usage": null,
+      "description": "Bricht das laufende Begleiter-Rennen ab.",
+      "custom": false
+    },
+    {
+      "name": "rennliste",
+      "aliases": [
+        "racetop"
+      ],
+      "permission": "everyone",
+      "category": "begleiter",
+      "usage": null,
+      "description": "Zeigt die Begleiter mit den meisten Rennsiegen.",
+      "custom": false
+    },
+    {
       "name": "resettop",
       "aliases": [],
       "permission": "broadcaster",
@@ -629,6 +678,17 @@
       "category": "moderation",
       "usage": "!testalert follow",
       "description": "Zeigt einen Test-Alert im Overlay: follow, raid, sub, resub, giftsub, cheer, redeem oder donation.",
+      "custom": false
+    },
+    {
+      "name": "tipp",
+      "aliases": [
+        "bet"
+      ],
+      "permission": "everyone",
+      "category": "begleiter",
+      "usage": "!tipp 3",
+      "description": "Tippt beim Begleiter-Rennen auf eine Startnummer. Richtige Tipps geben deinem Begleiter Erfahrung.",
       "custom": false
     },
     {
