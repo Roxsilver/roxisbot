@@ -97,6 +97,28 @@
   },
   "commands": [
     {
+      "name": "ablegen",
+      "aliases": [
+        "unwear"
+      ],
+      "permission": "everyone",
+      "category": "begleiter",
+      "usage": "!ablegen [zylinder]",
+      "description": "Zieht einen Gegenstand aus. Ohne Namen legt dein Begleiter alles ab.",
+      "custom": false
+    },
+    {
+      "name": "ablehnen",
+      "aliases": [
+        "decline"
+      ],
+      "permission": "everyone",
+      "category": "begleiter",
+      "usage": null,
+      "description": "Lehnt eine Herausforderung ab oder zieht deine eigene zurück.",
+      "custom": false
+    },
+    {
       "name": "addcmd",
       "aliases": [],
       "permission": "mod",
@@ -135,6 +157,17 @@
       "category": "begleiter",
       "usage": null,
       "description": "Adoptiere ein Ei – daraus schlüpft ein zufälliger Feuer-, Wasser-, Erd- oder Luftgeist, der im Stream herumläuft.",
+      "custom": false
+    },
+    {
+      "name": "annehmen",
+      "aliases": [
+        "accept"
+      ],
+      "permission": "everyone",
+      "category": "begleiter",
+      "usage": null,
+      "description": "Nimmt eine Herausforderung zum Duell an.",
       "custom": false
     },
     {
@@ -272,6 +305,37 @@
       "custom": true
     },
     {
+      "name": "duell",
+      "aliases": [
+        "duel"
+      ],
+      "permission": "everyone",
+      "category": "begleiter",
+      "usage": "!duell @name",
+      "description": "Fordert jemanden zum Begleiter-Duell heraus. Ohne Namen darf jeder annehmen.",
+      "custom": false
+    },
+    {
+      "name": "duellliste",
+      "aliases": [
+        "dueltop"
+      ],
+      "permission": "everyone",
+      "category": "begleiter",
+      "usage": null,
+      "description": "Zeigt die Begleiter mit den meisten Duellsiegen.",
+      "custom": false
+    },
+    {
+      "name": "duellstop",
+      "aliases": [],
+      "permission": "mod",
+      "category": "begleiter",
+      "usage": null,
+      "description": "Bricht das laufende Duell ab. Gesetzte XP gehen zurück.",
+      "custom": false
+    },
+    {
       "name": "editcmd",
       "aliases": [],
       "permission": "mod",
@@ -374,12 +438,34 @@
       "custom": true
     },
     {
+      "name": "inventar",
+      "aliases": [
+        "inventory"
+      ],
+      "permission": "everyone",
+      "category": "begleiter",
+      "usage": null,
+      "description": "Zeigt, was du besitzt, was dein Begleiter trägt und wie viele XP du frei hast.",
+      "custom": false
+    },
+    {
       "name": "join",
       "aliases": [],
       "permission": "everyone",
       "category": "mitmachen",
       "usage": null,
       "description": "Macht beim laufenden Giveaway mit.",
+      "custom": false
+    },
+    {
+      "name": "kaufen",
+      "aliases": [
+        "buy"
+      ],
+      "permission": "everyone",
+      "category": "begleiter",
+      "usage": "!kaufen zylinder",
+      "description": "Kauft etwas für XP und zieht es deinem Begleiter gleich an. Dein Begleiter wird dadurch nicht kleiner.",
       "custom": false
     },
     {
@@ -550,6 +636,26 @@
       "category": "verwaltung",
       "usage": "!setcat !name info",
       "description": "Ändert die Kategorie eines Commands: links, spass, mitmachen, spotify, zitate, begleiter, info oder mehr.",
+      "custom": false
+    },
+    {
+      "name": "setzen",
+      "aliases": [],
+      "permission": "everyone",
+      "category": "begleiter",
+      "usage": "!setzen 1 50",
+      "description": "Setzt XP auf Kämpfer 1 oder 2. Die Gewinner teilen sich die Einsätze der Verlierer.",
+      "custom": false
+    },
+    {
+      "name": "shop",
+      "aliases": [
+        "laden"
+      ],
+      "permission": "everyone",
+      "category": "begleiter",
+      "usage": null,
+      "description": "Zeigt, was es im Begleiter-Shop gibt: Hüte, Sonnenbrille und Auren, reine Optik.",
       "custom": false
     },
     {
@@ -731,6 +837,17 @@
       "category": "info",
       "usage": null,
       "description": "Zeigt die Top-Supporter bei Bits und verschenkten Abos.",
+      "custom": false
+    },
+    {
+      "name": "tragen",
+      "aliases": [
+        "wear"
+      ],
+      "permission": "everyone",
+      "category": "begleiter",
+      "usage": "!tragen zylinder",
+      "description": "Zieht deinem Begleiter etwas aus deinem Besitz an.",
       "custom": false
     },
     {
