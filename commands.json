@@ -12,59 +12,88 @@
   "categories": {
     "verwaltung": {
       "emoji": "⚙️",
-      "label": "Commands"
+      "label": "Commands",
+      "intro": null
     },
     "umfrage": {
       "emoji": "📊",
-      "label": "Umfrage"
+      "label": "Umfrage",
+      "intro": null
     },
     "gluecksrad": {
       "emoji": "🎡",
-      "label": "Glücksrad"
+      "label": "Glücksrad",
+      "intro": null
     },
     "giveaway": {
       "emoji": "🎁",
-      "label": "Giveaway"
+      "label": "Giveaway",
+      "intro": null
     },
     "zaehler": {
       "emoji": "🔢",
-      "label": "Zähler"
+      "label": "Zähler",
+      "intro": null
     },
     "moderation": {
       "emoji": "🛡️",
-      "label": "Moderation"
+      "label": "Moderation",
+      "intro": null
     },
     "links": {
       "emoji": "💬",
-      "label": "Links"
+      "label": "Links",
+      "intro": null
     },
     "spass": {
       "emoji": "🎉",
-      "label": "Spaß"
+      "label": "Spaß",
+      "intro": null
     },
     "mitmachen": {
       "emoji": "📊",
-      "label": "Mitmachen"
+      "label": "Mitmachen",
+      "intro": null
     },
     "spotify": {
       "emoji": "🎵",
-      "label": "Spotify"
+      "label": "Spotify",
+      "intro": null
     },
     "zitate": {
       "emoji": "📖",
-      "label": "Zitate"
+      "label": "Zitate",
+      "intro": null
     },
     "begleiter": {
       "emoji": "🥚",
-      "label": "Begleiter"
+      "label": "Begleiter",
+      "intro": "Hol dir mit `!adopt` ein Ei und wärme es mit `!pet`, bis ein Feuer-, Wasser-, Erd- oder Luftgeist schlüpft. Solange du im Chat aktiv bist, läuft er im Stream herum und braucht Futter, Spiel und Schlaf."
+    },
+    "rennen": {
+      "emoji": "🏁",
+      "label": "Begleiter-Rennen",
+      "intro": "Mods starten das Rennen. Du meldest deinen Begleiter mit `!rennen` an, danach tippt der ganze Chat mit `!tipp` auf den Sieger."
+    },
+    "duell": {
+      "emoji": "⚔️",
+      "label": "Begleiter-Duell",
+      "intro": "Fordere jemanden mit `!duell` heraus. Wird angenommen, setzt der Chat mit `!setzen` XP auf den Sieger, dann kämpfen die Begleiter im Stream."
+    },
+    "shop": {
+      "emoji": "🛒",
+      "label": "Begleiter-Shop",
+      "intro": "Gib freie XP für Hüte, die Sonnenbrille und Auren aus. Alles ist reine Optik, und dein Begleiter wird durch Einkäufe nicht kleiner."
     },
     "info": {
       "emoji": "ℹ️",
-      "label": "Info"
+      "label": "Info",
+      "intro": null
     },
     "mehr": {
       "emoji": "✨",
-      "label": "Mehr"
+      "label": "Mehr",
+      "intro": null
     }
   },
   "order": {
@@ -75,6 +104,9 @@
       "spotify",
       "zitate",
       "begleiter",
+      "rennen",
+      "duell",
+      "shop",
       "info",
       "mehr"
     ],
@@ -91,20 +123,176 @@
       "spotify",
       "zitate",
       "begleiter",
+      "rennen",
+      "duell",
+      "shop",
       "info",
       "mehr"
     ]
   },
   "commands": [
     {
-      "name": "ablegen",
+      "name": "adopt",
       "aliases": [
-        "unwear"
+        "adoptieren"
       ],
       "permission": "everyone",
       "category": "begleiter",
-      "usage": "!ablegen [zylinder]",
-      "description": "Zieht einen Gegenstand aus. Ohne Namen legt dein Begleiter alles ab.",
+      "usage": null,
+      "description": "Adoptiere ein Ei – daraus schlüpft ein zufälliger Feuer-, Wasser-, Erd- oder Luftgeist, der im Stream herumläuft.",
+      "custom": false
+    },
+    {
+      "name": "pet",
+      "aliases": [
+        "streicheln",
+        "kuscheln"
+      ],
+      "permission": "everyone",
+      "category": "begleiter",
+      "usage": null,
+      "description": "Streichelt deinen Begleiter oder wärmt dein Ei, damit es schneller schlüpft (jede Minute).",
+      "custom": false
+    },
+    {
+      "name": "feed",
+      "aliases": [
+        "füttern",
+        "fuettern"
+      ],
+      "permission": "everyone",
+      "category": "begleiter",
+      "usage": null,
+      "description": "Füttert deinen Begleiter (alle 5 Min.).",
+      "custom": false
+    },
+    {
+      "name": "play",
+      "aliases": [
+        "spielen"
+      ],
+      "permission": "everyone",
+      "category": "begleiter",
+      "usage": null,
+      "description": "Spielt mit deinem Begleiter – macht gute Laune, aber müde (alle 5 Min.).",
+      "custom": false
+    },
+    {
+      "name": "sleep",
+      "aliases": [
+        "schlafen"
+      ],
+      "permission": "everyone",
+      "category": "begleiter",
+      "usage": null,
+      "description": "Schickt deinen Begleiter für ein Nickerchen schlafen (alle 10 Min.).",
+      "custom": false
+    },
+    {
+      "name": "begleiter",
+      "aliases": [
+        "companion",
+        "haustier"
+      ],
+      "permission": "everyone",
+      "category": "begleiter",
+      "usage": "!begleiter [@name]",
+      "description": "Zeigt Hunger, Laune, Energie und Erfahrung deines Begleiters (oder den von jemand anderem).",
+      "custom": false
+    },
+    {
+      "name": "name",
+      "aliases": [
+        "taufen"
+      ],
+      "permission": "everyone",
+      "category": "begleiter",
+      "usage": "!name Flammi",
+      "description": "Gibt deinem Begleiter einen Namen (max. 16 Zeichen).",
+      "custom": false
+    },
+    {
+      "name": "freilassen",
+      "aliases": [
+        "release"
+      ],
+      "permission": "everyone",
+      "category": "begleiter",
+      "usage": "!freilassen ja",
+      "description": "Lässt deinen Begleiter frei – danach kannst du ein neues Ei adoptieren.",
+      "custom": false
+    },
+    {
+      "name": "rennen",
+      "aliases": [
+        "race"
+      ],
+      "permission": "everyone",
+      "category": "rennen",
+      "usage": null,
+      "description": "Meldet deinen Begleiter für das laufende Rennen an. Er bekommt eine Startnummer.",
+      "custom": false
+    },
+    {
+      "name": "tipp",
+      "aliases": [
+        "bet"
+      ],
+      "permission": "everyone",
+      "category": "rennen",
+      "usage": "!tipp 3",
+      "description": "Tippt beim Begleiter-Rennen auf eine Startnummer. Richtige Tipps geben deinem Begleiter Erfahrung.",
+      "custom": false
+    },
+    {
+      "name": "rennliste",
+      "aliases": [
+        "racetop"
+      ],
+      "permission": "everyone",
+      "category": "rennen",
+      "usage": null,
+      "description": "Zeigt die Begleiter mit den meisten Rennsiegen.",
+      "custom": false
+    },
+    {
+      "name": "rennenstart",
+      "aliases": [],
+      "permission": "mod",
+      "category": "rennen",
+      "usage": null,
+      "description": "Startet die Anmeldung für ein Begleiter-Rennen.",
+      "custom": false
+    },
+    {
+      "name": "rennenstop",
+      "aliases": [],
+      "permission": "mod",
+      "category": "rennen",
+      "usage": null,
+      "description": "Bricht das laufende Begleiter-Rennen ab.",
+      "custom": false
+    },
+    {
+      "name": "duell",
+      "aliases": [
+        "duel"
+      ],
+      "permission": "everyone",
+      "category": "duell",
+      "usage": "!duell @name",
+      "description": "Fordert jemanden zum Begleiter-Duell heraus. Ohne Namen darf jeder annehmen.",
+      "custom": false
+    },
+    {
+      "name": "annehmen",
+      "aliases": [
+        "accept"
+      ],
+      "permission": "everyone",
+      "category": "duell",
+      "usage": null,
+      "description": "Nimmt eine Herausforderung zum Duell an.",
       "custom": false
     },
     {
@@ -113,9 +301,93 @@
         "decline"
       ],
       "permission": "everyone",
-      "category": "begleiter",
+      "category": "duell",
       "usage": null,
       "description": "Lehnt eine Herausforderung ab oder zieht deine eigene zurück.",
+      "custom": false
+    },
+    {
+      "name": "setzen",
+      "aliases": [],
+      "permission": "everyone",
+      "category": "duell",
+      "usage": "!setzen 1 50",
+      "description": "Setzt XP auf Kämpfer 1 oder 2. Die Gewinner teilen sich die Einsätze der Verlierer.",
+      "custom": false
+    },
+    {
+      "name": "duellliste",
+      "aliases": [
+        "dueltop"
+      ],
+      "permission": "everyone",
+      "category": "duell",
+      "usage": null,
+      "description": "Zeigt die Begleiter mit den meisten Duellsiegen.",
+      "custom": false
+    },
+    {
+      "name": "duellstop",
+      "aliases": [],
+      "permission": "mod",
+      "category": "duell",
+      "usage": null,
+      "description": "Bricht das laufende Duell ab. Gesetzte XP gehen zurück.",
+      "custom": false
+    },
+    {
+      "name": "shop",
+      "aliases": [
+        "laden"
+      ],
+      "permission": "everyone",
+      "category": "shop",
+      "usage": null,
+      "description": "Zeigt, was es im Begleiter-Shop gibt: Hüte, Sonnenbrille und Auren, reine Optik.",
+      "custom": false
+    },
+    {
+      "name": "kaufen",
+      "aliases": [
+        "buy"
+      ],
+      "permission": "everyone",
+      "category": "shop",
+      "usage": "!kaufen zylinder",
+      "description": "Kauft etwas für XP und zieht es deinem Begleiter gleich an. Dein Begleiter wird dadurch nicht kleiner.",
+      "custom": false
+    },
+    {
+      "name": "tragen",
+      "aliases": [
+        "wear"
+      ],
+      "permission": "everyone",
+      "category": "shop",
+      "usage": "!tragen zylinder",
+      "description": "Zieht deinem Begleiter etwas aus deinem Besitz an.",
+      "custom": false
+    },
+    {
+      "name": "ablegen",
+      "aliases": [
+        "unwear"
+      ],
+      "permission": "everyone",
+      "category": "shop",
+      "usage": "!ablegen [zylinder]",
+      "description": "Zieht einen Gegenstand aus. Ohne Namen legt dein Begleiter alles ab.",
+      "custom": false
+    },
+    {
+      "name": "inventar",
+      "aliases": [
+        "inventory"
+      ],
+      "permission": "everyone",
+      "category": "shop",
+      "usage": null,
+      "description": "Zeigt, was du besitzt, was dein Begleiter trägt und wie viele XP du frei hast.",
       "custom": false
     },
     {
@@ -149,28 +421,6 @@
       "custom": false
     },
     {
-      "name": "adopt",
-      "aliases": [
-        "adoptieren"
-      ],
-      "permission": "everyone",
-      "category": "begleiter",
-      "usage": null,
-      "description": "Adoptiere ein Ei – daraus schlüpft ein zufälliger Feuer-, Wasser-, Erd- oder Luftgeist, der im Stream herumläuft.",
-      "custom": false
-    },
-    {
-      "name": "annehmen",
-      "aliases": [
-        "accept"
-      ],
-      "permission": "everyone",
-      "category": "begleiter",
-      "usage": null,
-      "description": "Nimmt eine Herausforderung zum Duell an.",
-      "custom": false
-    },
-    {
       "name": "awakenlife",
       "aliases": [],
       "permission": "everyone",
@@ -178,18 +428,6 @@
       "usage": null,
       "description": "🎮 AwakenLife – unser GTA Roleplay Server: https://discord.com/invite/rvKqHdYX5j",
       "custom": true
-    },
-    {
-      "name": "begleiter",
-      "aliases": [
-        "companion",
-        "haustier"
-      ],
-      "permission": "everyone",
-      "category": "begleiter",
-      "usage": "!begleiter [@name]",
-      "description": "Zeigt Hunger, Laune, Energie und Erfahrung deines Begleiters (oder den von jemand anderem).",
-      "custom": false
     },
     {
       "name": "cancelpoll",
@@ -305,37 +543,6 @@
       "custom": true
     },
     {
-      "name": "duell",
-      "aliases": [
-        "duel"
-      ],
-      "permission": "everyone",
-      "category": "begleiter",
-      "usage": "!duell @name",
-      "description": "Fordert jemanden zum Begleiter-Duell heraus. Ohne Namen darf jeder annehmen.",
-      "custom": false
-    },
-    {
-      "name": "duellliste",
-      "aliases": [
-        "dueltop"
-      ],
-      "permission": "everyone",
-      "category": "begleiter",
-      "usage": null,
-      "description": "Zeigt die Begleiter mit den meisten Duellsiegen.",
-      "custom": false
-    },
-    {
-      "name": "duellstop",
-      "aliases": [],
-      "permission": "mod",
-      "category": "begleiter",
-      "usage": null,
-      "description": "Bricht das laufende Duell ab. Gesetzte XP gehen zurück.",
-      "custom": false
-    },
-    {
       "name": "editcmd",
       "aliases": [],
       "permission": "mod",
@@ -366,18 +573,6 @@
       "custom": false
     },
     {
-      "name": "feed",
-      "aliases": [
-        "füttern",
-        "fuettern"
-      ],
-      "permission": "everyone",
-      "category": "begleiter",
-      "usage": null,
-      "description": "Füttert deinen Begleiter (alle 5 Min.).",
-      "custom": false
-    },
-    {
       "name": "feier",
       "aliases": [],
       "permission": "everyone",
@@ -395,17 +590,6 @@
       "category": "info",
       "usage": "!followage [@name]",
       "description": "Zeigt, seit wann du (oder jemand anderes) dem Kanal folgst.",
-      "custom": false
-    },
-    {
-      "name": "freilassen",
-      "aliases": [
-        "release"
-      ],
-      "permission": "everyone",
-      "category": "begleiter",
-      "usage": "!freilassen ja",
-      "description": "Lässt deinen Begleiter frei – danach kannst du ein neues Ei adoptieren.",
       "custom": false
     },
     {
@@ -438,34 +622,12 @@
       "custom": true
     },
     {
-      "name": "inventar",
-      "aliases": [
-        "inventory"
-      ],
-      "permission": "everyone",
-      "category": "begleiter",
-      "usage": null,
-      "description": "Zeigt, was du besitzt, was dein Begleiter trägt und wie viele XP du frei hast.",
-      "custom": false
-    },
-    {
       "name": "join",
       "aliases": [],
       "permission": "everyone",
       "category": "mitmachen",
       "usage": null,
       "description": "Macht beim laufenden Giveaway mit.",
-      "custom": false
-    },
-    {
-      "name": "kaufen",
-      "aliases": [
-        "buy"
-      ],
-      "permission": "everyone",
-      "category": "begleiter",
-      "usage": "!kaufen zylinder",
-      "description": "Kauft etwas für XP und zieht es deinem Begleiter gleich an. Dein Begleiter wird dadurch nicht kleiner.",
       "custom": false
     },
     {
@@ -507,46 +669,12 @@
       "custom": false
     },
     {
-      "name": "name",
-      "aliases": [
-        "taufen"
-      ],
-      "permission": "everyone",
-      "category": "begleiter",
-      "usage": "!name Flammi",
-      "description": "Gibt deinem Begleiter einen Namen (max. 16 Zeichen).",
-      "custom": false
-    },
-    {
       "name": "permit",
       "aliases": [],
       "permission": "mod",
       "category": "moderation",
       "usage": "!permit @name",
       "description": "Erlaubt jemandem für 60 Sekunden einen Link.",
-      "custom": false
-    },
-    {
-      "name": "pet",
-      "aliases": [
-        "streicheln",
-        "kuscheln"
-      ],
-      "permission": "everyone",
-      "category": "begleiter",
-      "usage": null,
-      "description": "Streichelt deinen Begleiter oder wärmt dein Ei, damit es schneller schlüpft (jede Minute).",
-      "custom": false
-    },
-    {
-      "name": "play",
-      "aliases": [
-        "spielen"
-      ],
-      "permission": "everyone",
-      "category": "begleiter",
-      "usage": null,
-      "description": "Spielt mit deinem Begleiter – macht gute Laune, aber müde (alle 5 Min.).",
       "custom": false
     },
     {
@@ -581,46 +709,6 @@
       "custom": false
     },
     {
-      "name": "rennen",
-      "aliases": [
-        "race"
-      ],
-      "permission": "everyone",
-      "category": "begleiter",
-      "usage": null,
-      "description": "Meldet deinen Begleiter für das laufende Rennen an. Er bekommt eine Startnummer.",
-      "custom": false
-    },
-    {
-      "name": "rennenstart",
-      "aliases": [],
-      "permission": "mod",
-      "category": "begleiter",
-      "usage": null,
-      "description": "Startet die Anmeldung für ein Begleiter-Rennen.",
-      "custom": false
-    },
-    {
-      "name": "rennenstop",
-      "aliases": [],
-      "permission": "mod",
-      "category": "begleiter",
-      "usage": null,
-      "description": "Bricht das laufende Begleiter-Rennen ab.",
-      "custom": false
-    },
-    {
-      "name": "rennliste",
-      "aliases": [
-        "racetop"
-      ],
-      "permission": "everyone",
-      "category": "begleiter",
-      "usage": null,
-      "description": "Zeigt die Begleiter mit den meisten Rennsiegen.",
-      "custom": false
-    },
-    {
       "name": "resettop",
       "aliases": [],
       "permission": "broadcaster",
@@ -636,26 +724,6 @@
       "category": "verwaltung",
       "usage": "!setcat !name info",
       "description": "Ändert die Kategorie eines Commands: links, spass, mitmachen, spotify, zitate, begleiter, info oder mehr.",
-      "custom": false
-    },
-    {
-      "name": "setzen",
-      "aliases": [],
-      "permission": "everyone",
-      "category": "begleiter",
-      "usage": "!setzen 1 50",
-      "description": "Setzt XP auf Kämpfer 1 oder 2. Die Gewinner teilen sich die Einsätze der Verlierer.",
-      "custom": false
-    },
-    {
-      "name": "shop",
-      "aliases": [
-        "laden"
-      ],
-      "permission": "everyone",
-      "category": "begleiter",
-      "usage": null,
-      "description": "Zeigt, was es im Begleiter-Shop gibt: Hüte, Sonnenbrille und Auren, reine Optik.",
       "custom": false
     },
     {
@@ -684,17 +752,6 @@
       "usage": null,
       "description": "{user} verteilt eine bestimmt Liebevolle Schelle an {target} ! Kappa",
       "custom": true
-    },
-    {
-      "name": "sleep",
-      "aliases": [
-        "schlafen"
-      ],
-      "permission": "everyone",
-      "category": "begleiter",
-      "usage": null,
-      "description": "Schickt deinen Begleiter für ein Nickerchen schlafen (alle 10 Min.).",
-      "custom": false
     },
     {
       "name": "so",
@@ -797,17 +854,6 @@
       "custom": false
     },
     {
-      "name": "tipp",
-      "aliases": [
-        "bet"
-      ],
-      "permission": "everyone",
-      "category": "begleiter",
-      "usage": "!tipp 3",
-      "description": "Tippt beim Begleiter-Rennen auf eine Startnummer. Richtige Tipps geben deinem Begleiter Erfahrung.",
-      "custom": false
-    },
-    {
       "name": "tod",
       "aliases": [],
       "permission": "everyone",
@@ -837,17 +883,6 @@
       "category": "info",
       "usage": null,
       "description": "Zeigt die Top-Supporter bei Bits und verschenkten Abos.",
-      "custom": false
-    },
-    {
-      "name": "tragen",
-      "aliases": [
-        "wear"
-      ],
-      "permission": "everyone",
-      "category": "begleiter",
-      "usage": "!tragen zylinder",
-      "description": "Zieht deinem Begleiter etwas aus deinem Besitz an.",
       "custom": false
     },
     {
